@@ -1,0 +1,13 @@
+.CardGame { display: flex; position: relative; align-items: center; justify-content: center; flex-wrap: wrap; }
+/* .CardGame .deck {} */
+.CardGame .inputBox {width: 350px; height: 150px; display: flex; background: white; border: 1px solid; border-radius: 1rem; align-items: center; justify-content: center; flex-direction: column;}
+.CardGame .inputBox .levelInput {width: 90%; }
+
+.CardGame .cardWrap {max-width: 470px; max-height: 650px; flex-wrap: wrap;}
+.CardGame .cardWrap .Card {width: 5rem; height: 8rem;perspective: 10rem; position: relative; transform-style: preserve-3d;}
+.CardGame .cardWrap .Card .cardInner {position: relative; width: 100%; height: 100%; text-align: center; transition: transform 0.6s; transform-style: preserve-3d;}
+.CardGame .cardWrap .Card.cardFlip .cardInner {transform: rotateY(180deg);}
+.CardGame .cardWrap .Card div {pointer-events: none;}
+.CardGame .cardWrap .Card .cardInner div {position: absolute; width: 100%; height: 100%; backface-visibility: hidden;}
+.CardGame .cardWrap .Card .cardInner .cardFront {transform: rotateY(180deg);}
+.CardGame .cardWrap .Card .cardInner .cardBack { background-repeat: no-repeat; background-position: center; background-size: cover;}
